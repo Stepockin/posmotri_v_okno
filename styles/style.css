@@ -41,45 +41,216 @@ ol {
 .content{
   display: flex;
   align-items: flex-end;
+  width: 1140px;
+  min-height: 534px;
 }
 .search-form{
   display: flex;
   align-items: flex-start;
+  margin-top: 16px
 }
 .search-form__fieldset{
-  margin-right: 119px;
+  margin-right: 43px;
+}
+.search-form__fieldset-title{
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-align: left;
+  padding-bottom: 5px;
+}
+.search-form__textfield{
+  width: 225px;
+  height: 27px;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  border-top:solid 1px rgba(255, 255, 255, 0.7);
+  border-bottom:solid 1px rgba(255, 255, 255, 0.7);
+  appearance: none;
 }
 .content__list{
   overflow: auto;
-  height: 534px;
+  height: 399px;
+  position: relative;
 }
 .content__details{
   width: 100%;
   height: 100%;
   padding-left: 32px;
+  
 }
 .title{
   margin-bottom:26px ;
   width: 260px;
-  padding-top: 133px;
+
+  font-family: Oswald;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 70.5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.content__accent{
+  color: rgba(84, 80, 80, 1);
+
 }
 .result__video-container{
   width: 711px;
-  height: 386px;
+  height: 456px;
+  position: relative;
 }
 .result__video{
-  width: 100%;
+  width: 711px;
   height: 100%;
   object-fit: fill;
 }
 .content__list-item:not(:last-child){
   margin-bottom: 34px;
+
+}
+.content__card-link{
+  color: rgba(255, 255, 255, 1);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px;
+  text-align: left;
+  text-decoration: none;
+  display: block;
+
 }
 .content__video-card {
   display: flex; 
-  align-items: flex-start; 
+  align-items: flex-start;
+  flex-direction: row;
 }
 .content__video-card-thumbnail {
-  width: 100%; 
-  height: 100%; 
+  width: 194px;
+  height: 103px;
+}
+.content__video-card-title{
+  font-family: Oswald;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+
+}
+.content__video-card-description-container{
+  flex-grow: 1;
+}
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+fieldset{
+  border: none;
+}
+.search-form__label{
+  width: fit-content;
+}
+button{
+  cursor: pointer;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 1);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+.search-form__checkbox-list{
+  display: flex; /* Выстраивает элементы в строку */
+  align-items: center; /* Выровняет элементы по вертикали */
+}
+.search-form__pseudo-checkbox{
+  width: 19px;
+  height: 19px;
+  border: 1px solid white;
+  padding-right:20px ;
+}
+.search-form__label-text{
+  padding-left:1.5px;
+  padding-right:10px ;
+}
+.button.search-form__submit-button{
+  width: 189px;
+  height: 34px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  margin-top: 20px;
+}
+.button.more-button{
+  width: 392px;
+  height:34px;
+}
+.content__list-item:active{
+  background-color:rgba(84, 80, 80, 1);
+}
+.search-form__textfield:active{
+  border-top: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 0px;
+}
+.search-form__pseudo-checkbox:active{
+  width: 5px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 1);
+}
+input[type = "checkbox"]:checked + span{
+  width: 5px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 1);
+}
+.search-form__pseudo-checkbox:checked{
+  width: 5px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 1);
+}
+button:active{
+  background-color: rgba(84, 80, 80, 1);
+}
+.search-form__label-text:hover{
+  text-decoration: underline;
+}
+button:hover{
+  text-decoration: underline;
+}
+.content__video-card-description-container:hover{
+  text-decoration: underline;
+}
+.search-form__textfield:has(:focus-visible){
+  outline: 1px solid rgba(255, 255, 255, 1);
+}
+button:focus-visible{
+  outline: 1px solid rgba(255, 255, 255, 1);
+}
+button:focus {
+  outline: none; 
+  box-shadow: none; 
+}
+.content__card-link_current{
+  background-color: rgba(84, 80, 80, 1);
+}
+.content__card-link:focus{
+  outline: none; 
+}
+.content__card-link:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, 1);
+}
+.search-form__pseudo-checkbox:focus-visible{
+  outline: 1px solid rgba(255, 255, 255, 1);
 }
