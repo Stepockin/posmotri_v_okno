@@ -130,6 +130,7 @@ ol {
     text-align: left;
     text-decoration: none;
     display: block;
+    border: 1px solid transparent;
 }
 .content__video-card {
     display: flex;
@@ -155,6 +156,8 @@ ol {
     text-transform: uppercase;
     margin-bottom: 6px;
     text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .content__video-card-description-container {
     flex-grow: 1;
